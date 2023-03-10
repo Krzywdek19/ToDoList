@@ -1,0 +1,24 @@
+.wrapper-nav {
+	height: 5vh;
+	display: flex;
+	flex-flow: row;
+	margin-bottom: 2vh;
+
+	&__link {
+		flex: 1;
+		text-align: center;
+		padding-top: 1em;
+		padding-bottom: 2em;
+		text-decoration: none;
+		background-color: var(--primary-color);
+		border-top: 2px solid var(--text-color);
+		color: var(--text-color);
+		font-size: 18px;
+		font-weight: 500;
+		border-bottom: 7px solid var(--primary-color);
+	}
+
+	.active {
+		border-bottom: 7px solid var(--text-color);
+	}
+}

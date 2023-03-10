@@ -1,0 +1,16 @@
+.wrapper-header {
+  height: 10vh;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  flex-flow: column wrap;
+  align-content: flex-end;
+}
+.wrapper-header__title {
+  font-size: 30px;
+}
+.wrapper-header__text {
+  font-size: 22px;
+}/*# sourceMappingURL=Header.css.map */
