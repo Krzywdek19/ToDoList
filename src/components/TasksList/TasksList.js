@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import { AppContext } from "../context/AppContext";
-import Task from "./Task";
-import "../styles/TasksList.css";
+import { AppContext } from "../../context/AppContext";
+import Task from "../Task/Task";
+import "./TasksList.scss";
 
 const TasksList = (props) => {
 	const { actualTasks, finishedTasks, removedTasks } = useContext(AppContext);
@@ -27,7 +27,7 @@ const TasksList = (props) => {
 						/>
 					))
 				) : (
-					<h2 className="wrapper-tasks-list__info">Lista jest pusta</h2>
+					<h2 className="wrapper-tasks-list__info">List is empty</h2>
 				)}
 			</main>
 		);

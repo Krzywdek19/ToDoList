@@ -5,8 +5,8 @@
 	display: flex;
 	padding-top: 1.5rem;
 	padding-right: 1.5rem;
-	flex-flow: column wrap;
-	align-content: flex-end;
+	flex-flow: column nowrap;
+	align-items: flex-end;
 
 	&__title {
 		font-size: 30px;

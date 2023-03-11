@@ -1,8 +1,27 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../styles/Form.css";
+import { useEffect, useState } from "react";
+import "./Form.scss";
 
 const TaskForm = (props) => {
+	const [displayBorder, setDisplayBorder] = useState(true);
+
+	const handleResize = () => {
+		if (window.innerWidth < 900) {
+			setDisplayBorder(false);
+		} else {
+			setDisplayBorder(true);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener("resize", handleResize);
+	});
+
+	useEffect(() => {
+		handleResize();
+	}, []);
+
 	return (
 		<form className="wrapper-form" onSubmit={props.handleSubmit}>
 			<label className="wrapper-form__label">
@@ -23,11 +42,17 @@ const TaskForm = (props) => {
 					onChange={props.handleChangeContent}
 				></input>
 			</label>
-			<div className="wrapper-form__btn-border">
-				<button className="wrapper-form__btn">
+			{displayBorder ? (
+				<div className="wrapper-form__btn-border">
+					<button className="wrapper-form__btn">
+						<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+					</button>
+				</div>
+			) : (
+				<button className="wrapper-form__pure-btn">
 					<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
 				</button>
-			</div>
+			)}
 		</form>
 	);
 };

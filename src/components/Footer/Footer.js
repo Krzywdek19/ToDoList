@@ -1,4 +1,4 @@
-import "../styles/Footer.css";
+import "./Footer.scss";
 
 const Footer = (props) => (
 	<footer className="wrapper-footer">

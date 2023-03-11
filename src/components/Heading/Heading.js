@@ -1,4 +1,4 @@
-import "../styles/Header.css";
+import "./Header.scss";
 
 const Heading = (props) => (
 	<header className="wrapper-header">

@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Controls from "./Controls";
-
-import "../styles/TasksList.css";
+import Controls from "../Controls/Controls";
 
 const Task = (props) => (
 	<div className="wrapper-tasks-list-task">

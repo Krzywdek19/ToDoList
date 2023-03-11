@@ -1,9 +1,7 @@
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "..//../context/AppContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
-
-import "../styles/TasksList.css";
 
 const Controls = (props) => {
 	const { finishTask, removeTask } = useContext(AppContext);
